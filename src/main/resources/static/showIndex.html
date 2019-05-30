@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>增删改查</title>
+    <script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
+    <script type="text/javascript" src="js/shop.js"></script>
+</head>
+
+<body>
+    <h2>模拟商品添加</h2>
+    商品名称：<input id="goodsName"><br>
+    商品详情：<input id="goodsDesc"><br>
+    商品售价：<input id="goodsPrice"><br>
+    商品状态：<input id="goodsStatus"><br>
+    <button id="addCommit">提交</button>
+
+    <h2>模拟商品删除</h2>
+    商品名称: <input id="deleteByName"><br>
+    <button id="deleteButton">删除</button>
+
+    <h2>模拟商品修改</h2>
+    商品名称：<input id="goodsUpdateName"><br>
+    商品详情：<input id="goodsUpdateDesc"><br>
+    商品售价：<input id="goodsUpdatePrice"><br>
+    商品状态：<input id="goodsUpdateStatus"><br>
+    <button id="updateButton">修改</button>
+
+    <h2>模拟商品查找</h2>
+    商品名称：<input id="goodsSelectName">
+    <button id="selectButton">查找</button>
+
+<br>
+    <div>
+        <h2>全部商品</h2>
+        <table border="1" >
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>goodsName</th>
+                <th>goodsPrice</th>
+                <th>goodsProvider</th>
+                <th>goodsDesc</th>
+                <th>goodsStatus</th>
+                <th>createUserId</th>
+                <th>createTime</th>
+                <th>updateUserId</th>
+                <th>updateTime</th>
+                <th>deleteFlag</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="sqlTables">
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

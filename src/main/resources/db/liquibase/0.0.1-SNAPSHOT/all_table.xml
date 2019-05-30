@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="shiyi" id="T100-20190526-1">
+        <createTable tableName="goods">
+            <column name="id" type="BIGINT(20)" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"  />
+            </column>
+            <column name="goodsName" type="VARCHAR(50)"/>
+            <column name="goodsPrice" type="VARCHAR(50)"/>
+            <column name="goodsProvider" type="VARCHAR(50)"/>
+            <column name="goodsDesc" type="VARCHAR(50)"/>
+            <column name="goodsStatus" type="VARCHAR(50)"/>
+
+            <column name="createUserId" type="BIGINT(20)"/>
+            <column name="createTime" type="DATE"/>
+            <column name="updateUserId" type="BIGINT(20)"/>
+            <column name="updateTime" type="DATE"/>
+            <column name="deleteFlag" type="SMALLINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="T100-20190526-2" author="shiyi">
+        <loadData tableName="goods" file="db/liquibase/0.0.1-SNAPSHOT/elec_goods.csv">
+            <column name="id" type="NUMERIC"/>
+            <column name="goodsName" type="STRING"/>
+            <column name="goodsPrice" type="STRING"/>
+            <column name="goodsProvider" type="STRING"/>
+            <column name="goodsDesc" type="STRING"/>
+            <column name="goodsStatus" type="STRING"/>
+            <column name="createUserId" type="NUMERIC"/>
+            <column name="createTime" type="DATE"/>
+            <column name="updateUserId" type="NUMERIC"/>
+            <column name="updateTime" type="DATE"/>
+            <column name="deleteFlag" type="NUMERIC"/>
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>
